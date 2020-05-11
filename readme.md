@@ -56,14 +56,14 @@ module.exports = {
     this commands will   
     1) download a xlsx file of a speicic Revision under build/locales/revisions/[revisionID]
     2) parse the xlsx file
-    3) save json files under build/locales  
-   *this will OVERWRITE json files for web-server build*
+    3) save json files under **build/locales**
+   *this will **OVERWRITE** json files for web-server build*
 
 6. npm run download:langsRev  
     this commands will   
     1) download a xlsx file of a speicic Revision under build/locales/revisions/[revisionID]
     2) parse the xlsx file
-    3) save json files under build/locales/revisions/[revisionID]  
+    3) save json files under **build/locales/revisions/[revisionID]**
    *this will NOT overwrite json files for web-server build*
 
 ## Demo
