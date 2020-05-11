@@ -52,14 +52,14 @@ module.exports = {
     if you want to download a specific revision with known revision id, use this option.  
     if you don't use option, dialog will show up for you to choose Revision ID
 
-5. npm run build:langsRev
+5. npm run build:langsRev  
     this commands will   
     1) download a xlsx file of a speicic Revision under build/locales/revisions/[revisionID]
     2) parse the xlsx file
     3) save json files under build/locales  
    *this will OVERWRITE json files for web-server build*
 
-6. npm run download:langsRev
+6. npm run download:langsRev  
     this commands will   
     1) download a xlsx file of a speicic Revision under build/locales/revisions/[revisionID]
     2) parse the xlsx file
