@@ -43,36 +43,19 @@ module.exports = {
     }
 };
 ```
-4. add two lines into package.json under web-server  
+4. use below lines in package.json to use a revision of the spreadsheet
     ```
-    "build:langsRev": "translation downloadAndBuild",
-    "download:langsRev": "translation downloadOnly -r 31"
+    "build:langs": "rm -fr build/locales && npm run build:babel && translation build -r [revisionID]",
     ```
     - option **-r** **RevisionID**  
     if you want to download a specific revision with known revision id, use this option.  
-    if you don't use option, dialog will show up for you to choose Revision ID
+    if ommitted, it will use the latest version of the spreadsheet
+    json files for languages will be generated under the build directory (build/locales)
 
-5. npm run build:langsRev
-    this commands will   
-    1) download a xlsx file of a speicic Revision under build/locales/revisions/[revisionID]
-    2) parse the xlsx file
-    3) save json files under build/locales  
-   *this will OVERWRITE json files for web-server build*
-
-6. npm run download:langsRev
-    this commands will   
-    1) download a xlsx file of a speicic Revision under build/locales/revisions/[revisionID]
-    2) parse the xlsx file
-    3) save json files under build/locales/revisions/[revisionID]  
-   *this will NOT overwrite json files for web-server build*
-
-## Demo
-<p align ="center"> 
-  <img src = "https://github.com/sijoonlee/explain/blob/master/download_ex.gif" width = "700"/> 
-</p>
-
-<p align ="center"> 
-  <img src = "https://github.com/sijoonlee/explain/blob/master/build_ex.gif" width = "700"/> 
-</p>
-
-
+    ```
+    "download:langsRev": "translation downloadOnly -r [revisionID]"
+    ```
+        - option **-r** **RevisionID**  
+    if you want to download a specific revision with known revision id, use this option.  
+    if ommitted, it will show simple dialog for user to choose [revisionID]
+    json files for languages will be generated under the revision directory (build/locales/revisions/[revisionID])
