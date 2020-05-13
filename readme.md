@@ -56,7 +56,7 @@ module.exports = {
     if ommitted, it will use the latest version of the spreadsheet  
     json files for languages will be generated under the build directory (build/locales)  
   
-    B. npm run download:langsRev
+    B. npm run download:langs
     ```
     inside of packages.json
     "download:langsRev": "translation downloadOnly -r [revisionID]"
