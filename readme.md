@@ -49,19 +49,32 @@ module.exports = {
     A. npm run build:langs
     ```
     inside of packages.json
-    "build:langs": "rm -fr build/locales && npm run build:babel && translation build -r [revisionID]",
+    "build:langs": "rm -fr build/locales && npm run build:babel && translation build"
     ```
-    - option **-r** **[revisionID]**  
-    if you want to download a specific revision with known revision id, use this option.  
-    if ommitted, it will use the latest version of the spreadsheet  
+    The latest version of the spread sheet will be used
     json files for languages will be generated under the build directory (build/locales)  
-  
-    B. npm run download:langs
+    
+    B. npm run build:langsRev
+    ```
+    inside of packages.json
+    "build:langsRev": "rm -fr build/locales && npm run build:babel && translation build -r [revisionID]"
+    ```
+    The version with [revisionID] of the spread sheet will be used
+    If [revisionID] is unknown, please try C first.
+    json files for languages will be generated under the build directory (build/locales)  
+    
+    C. npm run download:langs
+    ```
+    inside of packages.json
+    "download:langsRev": "translation downloadOnly"
+    ```
+    it will show **all revision list** and let user choose [revisionID]  
+    json files for languages will be generated under the revision directory (build/locales/revisions/[revisionID])  
+
+    D. npm run download:langsRev
     ```
     inside of packages.json
     "download:langsRev": "translation downloadOnly -r [revisionID]"
     ```
-    - option **-r** **[RevisionID]**  
-    if you want to download a specific revision with known revision id, use this option.  
-    if ommitted, it will show simple dialog for user to choose [revisionID]  
+    The version with [revisionID] of the spread sheet will be used
     json files for languages will be generated under the revision directory (build/locales/revisions/[revisionID])  
