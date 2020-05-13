@@ -56,7 +56,7 @@ module.exports = {
     
     B. npm run build:langsRev
     ```
-    inside of packages.json
+    inside of package.json
     "build:langsRev": "rm -fr build/locales && npm run build:babel && translation build -r [revisionID]"
     ```
     The version with [revisionID] of the spread sheet will be used  
@@ -65,7 +65,7 @@ module.exports = {
     
     C. npm run download:langs  
     ```
-    inside of packages.json
+    inside of package.json
     "download:langsRev": "translation downloadOnly"
     ```
     it will show **all revision list** and let user choose [revisionID]    
@@ -73,7 +73,7 @@ module.exports = {
 
     D. npm run download:langsRev  
     ```
-    inside of packages.json
+    inside of package.json
     "download:langsRev": "translation downloadOnly -r [revisionID]"
     ```
     The version with [revisionID] of the spread sheet will be used  
