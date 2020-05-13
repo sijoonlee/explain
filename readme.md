@@ -42,8 +42,10 @@ module.exports = {
         ]
     }
 };
-```
+```  
+
 4. use below lines in package.json to use a revision of the spreadsheet
+  
     ```
     "build:langs": "rm -fr build/locales && npm run build:babel && translation build -r [revisionID]",
     ```
@@ -52,7 +54,8 @@ module.exports = {
     if ommitted, it will use the latest version of the spreadsheet
     json files for languages will be generated under the build directory (build/locales)
     usage ex) npm run build:langs
-
+  
+  
     ```
     "download:langsRev": "translation downloadOnly -r [revisionID]"
     ```
