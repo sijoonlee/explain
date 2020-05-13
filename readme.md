@@ -55,7 +55,7 @@ module.exports = {
     ```
     "download:langsRev": "translation downloadOnly -r [revisionID]"
     ```
-        - option **-r** **RevisionID**  
+    - option **-r** **RevisionID**  
     if you want to download a specific revision with known revision id, use this option.  
     if ommitted, it will show simple dialog for user to choose [revisionID]
     json files for languages will be generated under the revision directory (build/locales/revisions/[revisionID])
