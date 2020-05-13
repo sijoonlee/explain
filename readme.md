@@ -59,22 +59,22 @@ module.exports = {
     inside of packages.json
     "build:langsRev": "rm -fr build/locales && npm run build:babel && translation build -r [revisionID]"
     ```
-    The version with [revisionID] of the spread sheet will be used
-    If [revisionID] is unknown, please try C first.
-    json files for languages will be generated under the build directory (build/locales)  
+    The version with [revisionID] of the spread sheet will be used  
+    If [revisionID] is unknown, please try C first.  
+    json files for languages will be generated under the build directory (build/locales)   
     
-    C. npm run download:langs
+    C. npm run download:langs  
     ```
     inside of packages.json
     "download:langsRev": "translation downloadOnly"
     ```
-    it will show **all revision list** and let user choose [revisionID]  
-    json files for languages will be generated under the revision directory (build/locales/revisions/[revisionID])  
+    it will show **all revision list** and let user choose [revisionID]    
+    json files for languages will be generated under the revision directory (build/locales/revisions/[revisionID])    
 
-    D. npm run download:langsRev
+    D. npm run download:langsRev  
     ```
     inside of packages.json
     "download:langsRev": "translation downloadOnly -r [revisionID]"
     ```
-    The version with [revisionID] of the spread sheet will be used
-    json files for languages will be generated under the revision directory (build/locales/revisions/[revisionID])  
+    The version with [revisionID] of the spread sheet will be used  
+    json files for languages will be generated under the revision directory (build/locales/revisions/[revisionID])    
