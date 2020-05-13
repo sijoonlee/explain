@@ -51,7 +51,7 @@ module.exports = {
     inside of packages.json
     "build:langs": "rm -fr build/locales && npm run build:babel && translation build"
     ```
-    The latest version of the spread sheet will be used
+    The latest version of the spread sheet will be used  
     json files for languages will be generated under the build directory (build/locales)  
     
     B. npm run build:langsRev
